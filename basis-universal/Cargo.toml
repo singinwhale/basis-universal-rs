@@ -19,3 +19,7 @@ bitflags = "1.2.1"
 [dev-dependencies]
 image = "0.23.13"
 lz4 = "1.23"
+
+[features]
+link-static = ["basis-universal-sys/link-static"]
+with-sse = ["basis-universal-sys/with-sse"]
