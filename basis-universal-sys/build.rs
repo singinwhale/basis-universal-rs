@@ -17,8 +17,8 @@ fn build_with_common_settings() -> cc::Build {
 fn main() {
     build_with_common_settings()
         .cpp(true)
-        .define("BASISD_SUPPORT_KTX2_ZSTD", if cfg!(feature = "with-zstd") {"1"} else {"0"})
-        .define("BASISU_SUPPORT_SSE", if cfg!(feature = "with-SSE") {"1"} else {"0"}) // TODO: expose this in a futher release
+        .define("BASISD_SUPPORT_KTX2_ZSTD", "0")
+        //.define("BASISU_SUPPORT_SSE", "0") TODO: expose this in a futher release
         .cpp_link_stdlib_static(cfg!(feature = "link-static"))
         .static_crt(cfg!(feature = "link-static"))
         .static_flag(cfg!(feature = "link-static"))

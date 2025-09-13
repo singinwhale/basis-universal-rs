@@ -22,4 +22,3 @@ lz4 = "1.23"
 
 [features]
 link-static = ["basis-universal-sys/link-static"]
-with-sse = ["basis-universal-sys/with-sse"]
